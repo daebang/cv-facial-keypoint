@@ -35,7 +35,6 @@ def load_data(test=False):
     else:
         y = None
 
-		
     return X, y
 
 def plot_data(img, landmarks, axis):
@@ -45,7 +44,7 @@ def plot_data(img, landmarks, axis):
     axis.imshow(np.squeeze(img), cmap='gray') # plot the image
     landmarks = landmarks * 48 + 48 # undo the normalization
     # Plot the keypoints
-	print(landmarks)
+
     axis.scatter(landmarks[0::2], 
         landmarks[1::2], 
         marker='o', 
